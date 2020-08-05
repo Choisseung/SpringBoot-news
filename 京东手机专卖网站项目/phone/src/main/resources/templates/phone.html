@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品信息</title>
+    <link rel="stylesheet" href="../static/css/Phone.css" th:href="@{/css/Phone.css}">
+</head>
+<body>
+
+
+<div class='container' id='container'>
+    <div class="img-container ">
+        <!-- 商品图片 -->
+        <img class="product_img" th:src="@{${phone.product_img}}">
+    </div>
+    <div class="info-container ">
+        <!-- 商品信息 -->
+        <span class="what_info">型号：</span>
+        <input type="hidden" th:value="${phone.id}" class="id"/>
+        <span class="info_content" th:text="${phone.p_model}">魅族17pro</span><br/>
+        <span class="what_info">价格：</span>
+        <span class="info_content" th:text="'￥ '+${phone.price}">3998.00</span><br/>
+        <span class="what_info">颜色：</span>
+        <span class="info_content" th:text="${phone.color}">白色</span><br/>
+        <span class="what_info">厂商：</span>
+        <span class="info_content" th:text="${phone.brand}">魅族</span><br/>
+        <span class="what_info">库存数量：</span>
+        <span class="info_content" th:text="${phone.amount}">50</span><br/>
+        <a class="buy_button" type="button" th:href="@{/admin/trolley/add/{id}(id=${phone.id})}">加入购物车</a>
+
+    </div>
+
+</div>
+</body>
+
+</html>

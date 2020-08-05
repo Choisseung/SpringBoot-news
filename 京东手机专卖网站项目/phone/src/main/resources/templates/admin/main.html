@@ -1,0 +1,1089 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>京东(JD.COM)</title>
+    <link rel="stylesheet" href="../../static/css/General.css" th:href="@{/css/General.css}">
+    <link rel="stylesheet" href="../../static/css/Head.css" th:href="@{/css/Head.css}">
+    <link rel="stylesheet" href="../../static/css/body.css" th:href="@{/css/body.css}">
+    <link rel="stylesheet" type="text/css" href="../../static/images/icon/download/iconfont1/iconfont.css" th:href="@{/images/icon/download/iconfont1/iconfont.css}">
+    <link rel="stylesheet" type="text/css" href="../../static/images/icon/download2/iconfont2/iconfont.css" th:href="@{/images/icon/download2/iconfont2/iconfont.css}">
+    <link rel="stylesheet" type="text/css" href="../../static/images/icon/download3/iconfont3/iconfont.css" th:href="@{/images/icon/download3/iconfont3/iconfont.css}">
+    <link rel="stylesheet" type="text/css" href="../../static/images/icon/download4/iconfont4/iconfont.css" th:href="@{/images/icon/download4/iconfont4/iconfont.css}">
+    <link rel="stylesheet" type="text/css" href="../../static/images/icon/download5/iconfont5/iconfont.css" th:href="@{/images/icon/download5/iconfont5/iconfont.css}">
+    <link rel="stylesheet" type="text/css" href="../../static/images/icon/download6/iconfont6/iconfont.css" th:href="@{/images/icon/download6/iconfont6/iconfont.css}">
+    <link rel="icon" type="image/svg" href="../../static/images/icon/favicon.ico" th:href="@{images/icon/favicon.ico}">
+
+    <style>
+    </style>
+</head>
+<body>
+<!--Guidance-->
+<div class="Guidance Big-Brother">
+    <div class="Big-Brother Top clearfix">
+        <div>
+            <span><i class="iconfont icon-zuobiao-copy-copy"> </i>北京</span>
+            <div class="location">
+                <div class="location-line">
+                    <a>北京</a>
+                    <a>上海</a>
+                    <a>天津</a>
+                    <a>重慶</a>
+                    <a>河北</a>
+                </div>
+                <div class="location-line">
+                    <a>山西</a>
+                    <a>河南</a>
+                    <a>遼寧</a>
+                    <a>吉林</a>
+                    <a>黑龍江</a>
+                </div>
+                <div class="location-line">
+                    <a>內蒙古</a>
+                    <a>江蘇</a>
+                    <a>山東</a>
+                    <a>安徽</a>
+                    <a>浙江</a>
+                </div>
+                <div class="location-line">
+                    <a>福建</a>
+                    <a>湖北</a>
+                    <a>湖南</a>
+                    <a>廣東</a>
+                    <a>廣西</a>
+                </div>
+                <div class="location-line">
+                    <a>江西</a>
+                    <a>四川</a>
+                    <a>海南</a>
+                    <a>貴州</a>
+                    <a>雲南</a>
+                </div>
+                <div class="location-line">
+                    <a>西藏</a>
+                    <a>陝西</a>
+                    <a>甘肅</a>
+                    <a>青海</a>
+                    <a>寧夏</a>
+                </div>
+                <div class="location-line">
+                    <a>新疆</a>
+                    <a>港澳</a>
+                    <a>台灣</a>
+                    <a class="diaoyudao">釣魚島</a>
+                    <a>海外</a>
+                </div>
+                <div class="available-sites">
+                    <p>Available Sites</p>
+                    <div class="site">
+                        <a><span></span>Global Site</a>
+                        <a><span></span>燙燙燙燙燙</a>
+                        <a><span></span>Situs Indonesia</a>
+                        <a><span></span>Sitio de Espana</a>
+                        <a><span></span>燙燙燙燙燙</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>你好~</div>
+        <div th:text="${session.user.nickname}">用户</div>
+        <div>欢迎~</div>
+        <div><a href="#" target="_blank" th:href="@{/admin/showOrder/{id}(id=${session.user.id})}">我的订单</a></div>
+        <div>
+            <a href="" target="_blank">我的京东</a><i class="iconfont icon-jiantou1"></i>
+            <div class="my-JD">
+                <div class="top-box">
+                    <p><a href="" target="_blank">待處理訂單</a></p>
+                    <p><a href="" target="_blank">消息</a></p>
+                    <p><a href="" target="_blank">返修退換貨</a></p>
+                    <p><a href="" target="_blank">我的問答</a></p>
+                    <p><a href="" target="_blank">降價商品</a></p>
+                    <p><a href="" target="_blank">我的關注</a></p>
+                </div>
+                <div class="down-box">
+                    <p><a href="" target="_blank">我的京豆</a></p>
+                    <p><a href="" target="_blank">我的優惠券</a></p>
+                    <p><a href="" target="_blank">我的白條</a></p>
+                    <p><a href="" target="_blank">我的理財</a></p>
+                </div>
+            </div>
+        </div>
+        <div><a href="" target="_blank">京东会员</a></div>
+        <div>
+            <a href="" target="_blank">企业采购</a><i class="iconfont icon-jiantou1"></i>
+            <div class="purchase">
+                <div class="purchase-content">
+                    <p><a href="" target="_blank">企業購</a></p>
+                    <p><a href="" target="_blank">商用場景館</a></p>
+                    <p><a href="" target="_blank">工業品</a></p>
+                    <p><a href="" target="_blank">禮品卡</a></p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href="" target="_blank">客户服务</a><i class="iconfont icon-jiantou1"></i>
+            <div class="service">
+                <div class="customer">
+                    <h3>客戶</h3>
+                    <p><a href="" target="_blank">幫助中心</a></p>
+                    <p><a href="" target="_blank">售後服務</a></p>
+                    <p><a href="" target="_blank">在線客服</a></p>
+                    <p><a href="" target="_blank">意見建議</a></p>
+                    <p><a href="" target="_blank">電話客服</a></p>
+                    <p><a href="" target="_blank">客服郵箱</a></p>
+                    <p><a href="" target="_blank">金融咨詢</a></p>
+                    <p><a href="" target="_blank">全球售客服</a></p>
+                </div>
+                <div class="merchant">
+                    <h3>商戶</h3>
+                    <p><a href="" target="_blank">合作招商</a></p>
+                    <p><a href="" target="_blank">學習中心</a></p>
+                    <p><a href="" target="_blank">商家後台</a></p>
+                    <p><a href="" target="_blank">京麥工作台</a></p>
+                    <p><a href="" target="_blank">商家幫助</a></p>
+                    <p><a href="" target="_blank">規則平台</a></p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href="" target="_blank">网站导航</a><i class="iconfont icon-jiantou1"></i>
+            <div class="web-nav Big-Brother">
+                <div class="theme">
+                    <h3>特色主題</h3>
+                    <p><a href="" target="_blank">京東試用</a></p>
+                    <p><a href="" target="_blank">京東金融</a></p>
+                    <p><a href="" target="_blank">全球售</a></p>
+                    <p><a href="" target="_blank">國際站</a></p>
+                    <p><a href="" target="_blank">京東會員</a></p>
+                    <p><a href="" target="_blank">京東預售</a></p>
+                    <p><a href="" target="_blank">買什麼</a></p>
+                    <p><a href="" target="_blank">俄語站</a></p>
+                    <p><a href="" target="_blank">裝機大師</a></p>
+                    <p><a href="" target="_blank">0元評測</a></p>
+                    <p><a href="" target="_blank">定期送</a></p>
+                    <p><a href="" target="_blank">港澳售</a></p>
+                    <p><a href="" target="_blank">優惠券</a></p>
+                    <p><a href="" target="_blank">秒殺</a></p>
+                    <p><a href="" target="_blank">閃購</a></p>
+                    <p><a href="" target="_blank">印尼站</a></p>
+                    <p><a href="" target="_blank">京東金融科技</a></p>
+                    <p><a href="" target="_blank">in貨推薦</a></p>
+                    <p><a href="" target="_blank">陪伴計劃</a></p>
+                    <p><a href="" target="_blank">出海招商</a></p>
+                </div>
+                <div class="channel">
+                    <h3>行業頻道</h3>
+                    <p><a href="" target="_blank">手機</a></p>
+                    <p><a href="" target="_blank">智能數碼</a></p>
+                    <p><a href="" target="_blank">玩3C</a></p>
+                    <p><a href="" target="_blank">電腦辦公</a></p>
+                    <p><a href="" target="_blank">家用電器</a></p>
+                    <p><a href="" target="_blank">京東智能</a></p>
+                    <p><a href="" target="_blank">服裝城</a></p>
+                    <p><a href="" target="_blank">京東生鮮</a></p>
+                    <p><a href="" target="_blank">家裝城</a></p>
+                    <p><a href="" target="_blank">母嬰</a></p>
+                    <p><a href="" target="_blank">食品</a></p>
+                    <p><a href="" target="_blank">農貿頻道</a></p>
+                    <p><a href="" target="_blank">整車</a></p>
+                    <p><a href="" target="_blank">圖書</a></p>
+                    <p><a href="" target="_blank">京東元器件</a></p>
+                </div>
+                <div class="life-service">
+                    <h3>生活服務</h3>
+                    <p><a href="" target="_blank">京東眾籌</a></p>
+                    <p><a href="" target="_blank">白條</a></p>
+                    <p><a href="" target="_blank">京東金融App</a></p>
+                    <p><a href="" target="_blank">京東小金庫</a></p>
+                    <p><a href="" target="_blank">理財</a></p>
+                    <p><a href="" target="_blank">話費</a></p>
+                    <p><a href="" target="_blank">水電煤</a></p>
+                    <p><a href="" target="_blank">彩票</a></p>
+                    <p><a href="" target="_blank">旅行</a></p>
+                    <p><a href="" target="_blank">機票酒店</a></p>
+                    <p><a href="" target="_blank">電影票</a></p>
+                    <p><a href="" target="_blank">京東到家</a></p>
+                    <p><a href="" target="_blank">遊戲</a></p>
+                </div>
+                <div class="more-selection">
+                    <h3>更多精選</h3>
+                    <p><a href="" target="_blank">合作招商</a></p>
+                    <p><a href="" target="_blank">京東通信</a></p>
+                    <p><a href="" target="_blank">京東E卡</a></p>
+                    <p><a href="" target="_blank">企業採購</a></p>
+                    <p><a href="" target="_blank">服務市場</a></p>
+                    <p><a href="" target="_blank">辦公生活館</a></p>
+                    <p><a href="" target="_blank">鄉村招募</a></p>
+                    <p><a href="" target="_blank">校園加盟</a></p>
+                    <p><a href="" target="_blank">親友邦</a></p>
+                    <p><a href="" target="_blank">京東社區</a></p>
+                    <p><a href="" target="_blank">遊戲社區</a></p>
+                    <p><a href="" target="_blank">只是產權維護</a></p>
+                </div>
+            </div>
+        </div>
+        <div><span>手机京东</span></div>
+
+    </div>
+
+</div>
+
+
+
+<!--Searching and the head-->
+<div class="web-head clearfix">
+    <form action="value" method="post">
+        <div class="search-line">
+            <input type="text" placeholder="iPhone11" />
+            <i class="iconfont icon-xiangji" id="xiangji"></i>
+            <input type="submit" name="item" value="" />
+        </div>
+    </form>
+    <div class="shopping-trolley">
+        <i class="iconfont icon-kong-gouwuche"></i>
+        <span><a href="" th:href="@{/admin/trolley/{id}(id=${session.user.id})}">我的购物车</a></span>
+<!--        <span th:text="${trolleyLength}">0</span>-->
+        <div class="shopping-content">
+            <i class="iconfont icon-konggouwuche"></i>
+            <span>购物车中還沒有商品，趕緊選購吧！</span>
+        </div>
+    </div>
+    <div class="JD-img">
+        <a href="" target="_self">
+            <img src="../static/images/topic/sprite.head.png" th:src="@{/images/topic/sprite.head.png}" >
+        </a>
+    </div>
+
+
+    <!--所有手机-->
+
+    <div class="banner-menu"><!-- 菜单栏 -->
+        <ul class='main-menu'>
+            <!--苹果-->
+            <li>
+                <a href=''>iPhone<span>></span></a>
+                <div class='sub-menu' >
+                    <ul th:each="item : ${pingguoAll}">
+                        <li>
+                            <a href='#' th:href="@{/phone/{id}(id=${item.id})}">
+                                <img src='../static/images/IP/ip7.jpg'
+                                     alt='' th:src="@{${item.product_img}}">
+                                <span th:text="${item.productname}">iPhone 8</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--华为-->
+            <li>
+                <a href=''>华为<span>></span></a>
+                <div class='sub-menu'>
+                    <ul th:each="item : ${huaweiAll}">
+                        <li>
+                            <a href='#' th:href="@{/phone/{id}(id=${item.id})}">
+                                <img src='../static/images/HW/hw1.png'
+                                     alt='' th:src="@{${item.product_img}}">
+                                <span th:text="${item.productname}">HUAWEI nova 6 SE</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--小米-->
+            <li>
+                <a href=''>小米<span>></span></a>
+                <div class='sub-menu'>
+                    <ul th:each="item : ${xiaomiAll}">
+                        <li>
+                            <a href='#' th:href="@{/phone/{id}(id=${item.id})}">
+                                <img src='../static/images/XM/1.jpg'
+                                     alt='' th:src="@{${item.product_img}}">
+                                <span th:text="${item.productname}">小米10 青春版 5G</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--魅族-->
+            <li>
+                <a href=''>魅族<span>></span></a>
+                <div class='sub-menu'>
+                    <ul th:each="item : ${meizuAll}">
+                        <li>
+                            <a href='#' th:href="@{/phone/{id}(id=${item.id})}">
+                                <img src='../static/images/MZ/1.JPG'
+                                     alt='' th:src="@{${item.product_img}}">
+                                <span th:text="${item.productname}">魅族 17 Pro</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--三星-->
+            <li>
+                <a href=''>三星<span>></span></a>
+                <div class='sub-menu'>
+                    <ul th:each="item : ${sanxingAll}">
+                        <li>
+                            <a href='#' th:href="@{/phone/{id}(id=${item.id})}">
+                                <img src='../static/images/Galaxy/1.jpg'
+                                     alt='' th:src="@{${item.product_img}}">
+                                <span th:text="${item.productname}">三星 S20 5G</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--        无缝轮播-->
+    <div id="wrap">
+        <ul class="pic"> <!--虚假的li-->
+            <li><a href="#" th:href="@{/phone/{id}(id=${pingguo2.id})}"><img src="../static/images/1.png" th:src="@{${pingguo2.product_img}}"/></a></li>
+            <li><a href="#" th:href="@{/phone/{id}(id=${sanxing0.id})}"><img src="../static/images/2.png" th:src="@{${sanxing0.product_img}}"/></a></li>
+            <li><a href="#" th:href="@{/phone/{id}(id=${huawei1.id})}"><img src="../static/images/3.png" th:src="@{${huawei1.product_img}}"/></a></li>
+            <li><a href="#" th:href="@{/phone/{id}(id=${xiaomi2.id})}"><img src="../static/images/4.png" th:src="@{${xiaomi2.product_img}}"/></a></li>
+            <li><a href="#" th:href="@{/phone/{id}(id=${meizu0.id})}"><img src="../static/images/5.png" th:src="@{${meizu0.product_img}}"/></a></li>
+            <li><a href="#" th:href="@{/phone/{id}(id=${huawei0.id})}"><img src="../static/images/1.png" th:src="@{${huawei0.product_img}}"/></a></li>
+        </ul>
+
+        <ul class="tab"><!--真正的li-->
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="prev"><</div>
+        <div class="next">></div>
+
+    </div>
+
+    <!--        用户栏-->
+    <div class="JD-fs-col">
+        <div class="JD-user">
+            <div class="JD-user-avatar">
+                <a href="#" th:href="@{/admin/userinfo/{id}/toUpdate(id=${session.user.id})}"  target="_blank"><img src="../../static/images/rec/4.jpg" th:src="@{${session.user.imgUrl}}" ></a>
+            </div>
+            <div class="user-show">
+                <span th:text="${session.user.nickname}">Hi~歡迎來到京東</span>
+                <p>
+                    <a th:href="@{/admin/logout}" >注销</a>
+<!--                    <a th:href="@{/admin/productList}" th:if="${user.isAdmin}">商品管理</a>-->
+                </p>
+
+            </div>
+
+            <div class="user-profit" th:if="${session.user.admin}">
+                <a th:href="@{/admin/productList}"  target="_blank">商品管理</a>
+                <a th:href="@{/admin/input}" target="_blank">商品添加</a>
+            </div>
+        </div>
+        <div class="JD-news">
+            <div class="news-content">
+                <div class="tab-head">
+                    <a href="" target="_blank">促銷</a>
+                    <a href="" target="_blank">公告</a>
+                    <a href="" target="_blank">更多</a>
+                    <div class="red-line"></div>
+                </div>
+                <div class="tab-content">
+                    <a href="" >芜湖~</a>
+                    <a href="">起飞~</a>
+                    <a href="">针不错</a>
+                    <a href="">A1高闪来一个，秋梨膏</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-entry">
+            <div class="icon-box"> <i class="iconfont icon-huafei"></i><p>話費</p></div>
+            <div class="icon-box"><i class="iconfont icon-jipiao"></i><p>機票</p></div>
+            <div class="icon-box"> <i class="iconfont icon-jiudian"></i><p>酒店</p></div>
+            <div class="icon-box"><i class="iconfont icon-game"></i><p>遊戲</p></div>
+            <div class="icon-box"><i class="iconfont icon-qiyegou-e"></i><p>企業購</p></div>
+            <div class="icon-box"><i class="iconfont icon-jiayouqia"></i><p>加油卡</p></div>
+            <div class="icon-box"><i class="iconfont icon-dianyingpiao"></i><p>電影票</p></div>
+            <div class="icon-box"><i class="iconfont icon-huochepiao"></i><p>火車票</p></div>
+            <div class="icon-box"><i class="iconfont icon-zhongchou"></i><p>眾籌</p></div>
+            <div class="icon-box"><i class="iconfont icon-licai"></i><p>理財</p></div>
+            <div class="icon-box"><i class="iconfont icon-icon_lipinka"></i><p>禮品卡</p></div>
+            <div class="icon-box"><i class="iconfont icon-baitiao"></i><p>白條</p></div>
+        </div>
+    </div>
+</div>
+
+
+<!--    排行榜-->
+<!--body-->
+<div class="corechn1 Big-Brother">
+    <div class="corechn1-box1">
+        <div class="title">
+            <a href="" target="_blank">
+                <span>排行榜</span>
+                <span><i class="iconfont icon-jiantou"></i></span>
+                <span>热销商品</span>
+            </a>
+        </div>
+        <div class="corechn1-box1-content">
+            <div class="sub-nav">
+                <ul>
+                    <li>
+                        <span>iPhone</span>
+                        <div class="page1">
+                            <div class="line1">
+                                <a href="#" >
+                                    <img src="../static/images/IP/ip3.jpg" th:src="@{${pingguo0.product_img}}"/>
+                                    <span><i class="iconfont icon-icon-test"></i></span>
+                                    <span th:text="${pingguo0.productname}">iPhone 11 Pro 256G
+                                        <h3 th:text="${pingguo0.salesVolume}">99</h3>
+                                        </span>
+
+                                </a>
+                            </div>
+                            <div class="line2">
+                                <a href="#" >
+                                    <img src="../static/images/IP/ip1.jpg" th:src="@{${pingguo1.product_img}}" />
+                                    <span><i class="iconfont icon-shuzi"></i></span>
+                                    <span th:text="${pingguo1.productname}">iPhone 11 128G</span>
+                                </a>
+                            </div>
+                            <div class="line3">
+                                <a href="#" >
+                                    <img src="../static/images/IP/ip4.jpg" th:src="@{${pingguo2.product_img}}"/>
+                                    <span><i class="iconfont icon-shuzi3"></i></span>
+                                    <span th:text="${pingguo2.productname}">iPhone XR 128G </span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>华为</span>
+                        <div class="page2">
+                            <div class="line1">
+                                <a href="#" >
+                                    <img src="../static/images/HW/hw4.jpg" th:src="@{${huawei0.product_img}}"/>
+                                    <span><i class="iconfont icon-icon-test"></i></span>
+                                    <span th:text="${huawei0.productname}">华为 P40 Pro</span>
+                                </a>
+                            </div>
+                            <div class="line2">
+                                <a href="#" >
+                                    <img src="../static/images/HW/hw1.png" th:src="@{${huawei1.product_img}}"/>
+                                    <span><i class="iconfont icon-shuzi"></i></span>
+                                    <span th:text="${huawei1.productname}">华为 nova 6 SE</span>
+                                </a>
+                            </div>
+                            <div class="line3">
+                                <a href="#" >
+                                    <img src="../static/images/HW/hw11.jpg" th:src="@{${huawei2.product_img}}"/>
+                                    <span><i class="iconfont icon-shuzi3"></i></span>
+                                    <span th:text="${huawei2.productname}">HUAWEI  Mate 30 5G</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>三星</span>
+                        <div class="page3">
+                            <div class="line1">
+                                <a href="" target="_blank">
+                                    <img src="../static/images/Galaxy/1.jpg" th:src="@{${sanxing0.product_img}}"/>
+                                    <span><i class="iconfont icon-icon-test"></i></span>
+                                    <span th:text="${sanxing0.productname}">三星 S20 5G</span>
+                                </a>
+                            </div>
+                            <div class="line2">
+                                <a href="" target="_blank">
+                                    <img src="../static/images/Galaxy/3.jpg" th:src="@{${sanxing1.product_img}}"/>
+                                    <span><i class="iconfont icon-shuzi"></i></span>
+                                    <span th:text="${sanxing1.productname}">三星 S10</span>
+                                </a>
+                            </div>
+                            <div class="line3">
+                                <a href="" target="_blank">
+                                    <img src="../static/images/Galaxy/4.jpg" th:src="@{${sanxing2.product_img}}"/>
+                                    <span><i class="iconfont icon-shuzi3"></i></span>
+                                    <span th:text="${sanxing2.productname}">三星 Note10</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>小米</span>
+                        <div class="page4">
+                            <div class="line1">
+                                <a href="" target="_blank">
+                                    <img src="../static/images/XM/2.jpg" th:src="@{${xiaomi0.product_img}}"/>
+                                    <span><i class="iconfont icon-icon-test"></i></span>
+                                    <span th:text="${xiaomi0.productname}">小米10</span>
+                                </a>
+                            </div>
+                            <div class="line2">
+                                <a href="" target="_blank">
+                                    <img src="../static/images/XM/5.jpg" th:src="@{${xiaomi1.product_img}}"/>
+                                    <span><i class="iconfont icon-shuzi"></i></span>
+                                    <span th:text="${xiaomi1.productname}">小米10 Pro 5G</span>
+                                </a>
+                            </div>
+                            <div class="line3">
+                                <a href="" target="_blank">
+                                    <img src="../static/images/XM/10.png" th:src="@{${xiaomi2.product_img}}"/>
+                                    <span><i class="iconfont icon-shuzi3"></i></span>
+                                    <span th:text="${xiaomi2.productname}">小米9</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>魅族</span>
+                        <div class="page5">
+                            <div class="line1">
+                                <a href="" target="_blank">
+                                    <img src="../static/images/MZ/2.jpg"  th:src="@{${meizu0.product_img}}"/>
+                                    <span><i class="iconfont icon-icon-test"></i></span>
+                                    <span th:text="${meizu0.productname}">魅族17</span>
+                                </a>
+                            </div>
+                            <div class="line2">
+                                <a href="" target="_blank">
+                                    <img src="../static/images/MZ/3.jpg" th:src="@{${meizu1.product_img}}"/>
+                                    <span><i class="iconfont icon-shuzi"></i></span>
+                                    <span th:text="${meizu1.productname}">魅族 16T</span>
+                                </a>
+                            </div>
+                            <div class="line3">
+                                <a href="" target="_blank">
+                                    <img src="../static/images/MZ/4.jpg" th:src="@{${meizu2.product_img}}"/>
+                                    <span><i class="iconfont icon-shuzi3"></i></span>
+                                    <span th:text="${meizu2.productname}">魅族 X8</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="corechn1-box2">
+        <div class="title">
+            <a href="#" >
+                <span>预售</span>
+                <span><i class="iconfont icon-jiantou"></i></span>
+                <span>全新科技</span>
+            </a>
+        </div>
+        <div class="corechn1-box2-content">
+            <div class="corechn1-box2-content-wraper">
+                <div class="wraper">
+                    <a href="#" >
+                        <img src="../static/images/Galaxy/1.jpg" th:src="@{/images/Galaxy/1.jpg}"/>
+                        <div>
+                            <img src="../static/images/Galaxy/12.jpg" th:src="@{/images/Galaxy/12.jpg}"/>
+                            <img src="../static/images/Galaxy/7.jpg" th:src="@{/images/Galaxy/7.jpg}"/>
+                            <img src="../static/images/Galaxy/13.jpg" th:src="@{/images/Galaxy/13.jpg}"/>
+                        </div>
+                        <p>全新三星系列手机限时发售</p>
+                    </a>
+                </div>
+                <div class="wraper">
+                    <a href="#" >
+                        <img src="../static/images/XM/1.jpg" th:src="@{/images/XM/1.jpg}"/>
+                        <div>
+                            <img src="../static/images/XM/2.jpg" th:src="@{/images/XM/2.jpg}"/>
+                            <img src="../static/images/XM/3.jpg" th:src="@{/images/XM/3.jpg}"/>
+                            <img src="../static/images/XM/4.jpg" th:src="@{/images/XM/4.jpg}"/>
+                        </div>
+                        <p>全新小米系列手机限时发售</p>
+
+                    </a>
+                </div>
+                <div class="wraper">
+                    <a href="#" >
+                        <img src="../static/images/IP/10.png" th:src="@{/images/IP/10.png}"/>
+                        <div>
+                            <img src="../static/images/IP/11.png" th:src="@{/images/IP/11.png}"/>
+                            <img src="../static/images/IP/12.png" th:src="@{/images/IP/12.png}"/>
+                            <img src="../static/images/IP/13.png" th:src="@{/images/IP/13.png}"/>
+                        </div>
+                        <p>全新苹果系列手机限时发售</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="corechn1-box3">
+        <div class="title">
+            <a href="" target="_blank">
+                <span>领券中心</span>
+                <span><i class="iconfont icon-jiantou"></i></span>
+                <span>前往领券中心</span>
+            </a>
+        </div>
+        <div class="corechn1-box3-content">
+            <a href="" target="_blank">
+                <div class="Coupon1">
+                    <div class="Coupon1-img"><img src="../static/images/corechn1/box3/1.png" th:src="@{/images/corechn1/box3/1.png}"/></div>
+                    <div class="coupon-price">
+                        <span>￥</span>
+                        <span>10</span>
+                    </div>
+                    <div class="coupon-limit"><span>满500元可用</span></div>
+                    <div class="coupon-desc"><p>全品类通用券（除特殊商品）【18/19/20/21点限量抢】</p></div>
+                    <div class="coupon-more-inner">更多精彩好券</div>
+                </div>
+                <div class="Coupon2">
+                    <div class="Coupon1-img"><img src="../static/images/corechn1/box3/1.png" th:src="@{/images/corechn1/box3/1.png}"/></div>
+                    <div class="coupon-price">
+                        <span>￥</span>
+                        <span>20</span>
+                    </div>
+                    <div class="coupon-limit"><span>满79元可用</span></div>
+                    <div class="coupon-desc"><p>仅可购买部分少数派店铺商品</p></div>
+                    <div class="coupon-more-inner">更多精彩好券</div>
+                </div>
+                <div class="Coupon3">
+                    <div class="Coupon1-img"><img src="../static/images/corechn1/box3/1.png" th:src="@{/images/corechn1/box3/1.png}"/></div>
+                    <div class="coupon-price">
+                        <span>￥</span>
+                        <span>40</span>
+                    </div>
+                    <div class="coupon-limit"><span>满399元可用</span></div>
+                    <div class="coupon-desc"><p>中图旗舰店</p></div>
+                    <div class="coupon-more-inner">更多精彩好券</div>
+                </div>
+            </a>
+            <div class="box-button">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--    新品上市-->
+<div class="style-title Big-Brother">
+    <p class="black-line"></p>
+    <p class="style-title-content">新品上市</p>
+</div>
+<!--title-->
+
+<div class="Big-Brother not-yet clearfix">
+
+    <div class="specific-item" th:each="product : ${page.content}">
+        <a href="#" th:href="@{/phone/{id}(id=${product.id})}" target="_blank"><img src="../static/images/HW/hw1.png" th:src="@{${product.product_img}}"/></a>
+        <input type="hidden"  class="id"/>
+        <span class="info_">
+                <span class="what_info">型号：</span>
+                <span class="info_content" th:text="${product.productname}">华为Nova6 SE</span><br/>
+                <span class="what_info">价格：</span>
+                <span class="info_content" th:text="${product.price}">3998.00</span><br/>
+            </span>
+        <div class="button_">
+            <a class="cart-button" type="button" th:href="@{/admin/trolley/add/{id}(id=${product.id})}">加入购物车</a>
+            <button class="cart-button">立即购买</button>
+        </div>
+    </div>
+    <!--/*-->
+    <div class="specific-item">
+        <a href="" target="_blank"><img src="../static/images/HW/hw1.png" th:src="@{/images/HW/hw1.png}"/></a>
+        <input type="hidden" class="id"/>
+        <span class="info_">
+                <span class="what_info">型号：</span>
+                <span class="info_content" >华为Nova6 SE</span><br/>
+                <span class="what_info">价格：</span>
+                <span class="info_content">3998.00</span><br/>
+            </span>
+        <div class="button_">
+            <button class="cart-button">加入购物车</button>
+            <button class="cart-button">立即购买</button>
+        </div>
+    </div>
+    <div class="specific-item">
+        <a href="" target="_blank"><img src="../static/images/HW/hw1.png" th:src="@{/images/HW/hw1.png}"/></a>
+        <input type="hidden" class="id"/>
+        <span class="info_">
+                <span class="what_info">型号：</span>
+                <span class="info_content" >华为Nova6 SE</span><br/>
+                <span class="what_info">价格：</span>
+                <span class="info_content">3998.00</span><br/>
+            </span>
+        <div class="button_">
+            <button class="cart-button">加入购物车</button>
+            <button class="cart-button">立即购买</button>
+        </div>
+    </div>
+    <div class="specific-item">
+        <a href="" target="_blank"><img src="../static/images/HW/hw1.png" th:src="@{/images/HW/hw1.png}"/></a>
+        <input type="hidden" class="id"/>
+        <span class="info_">
+                <span class="what_info">型号：</span>
+                <span class="info_content" >华为Nova6 SE</span><br/>
+                <span class="what_info">价格：</span>
+                <span class="info_content">3998.00</span><br/>
+            </span>
+        <div class="button_">
+            <button class="cart-button">加入购物车</button>
+            <button class="cart-button">立即购买</button>
+        </div>
+    </div>
+    <div class="specific-item">
+        <a href="" target="_blank"><img src="../static/images/HW/hw1.png" th:src="@{/images/HW/hw1.png}"/></a>
+        <input type="hidden" class="id"/>
+        <span class="info_">
+                <span class="what_info">型号：</span>
+                <span class="info_content" >华为Nova6 SE</span><br/>
+                <span class="what_info">价格：</span>
+                <span class="info_content">3998.00</span><br/>
+            </span>
+        <div class="button_">
+            <button class="cart-button">加入购物车</button>
+            <button class="cart-button">立即购买</button>
+        </div>
+    </div>
+    <div class="specific-item">
+        <a href="" target="_blank"><img src="../static/images/HW/hw1.png" th:src="@{/images/HW/hw1.png}"/></a>
+        <input type="hidden" class="id"/>
+        <span class="info_">
+                <span class="what_info">型号：</span>
+                <span class="info_content" >华为Nova6 SE</span><br/>
+                <span class="what_info">价格：</span>
+                <span class="info_content">3998.00</span><br/>
+            </span>
+        <div class="button_">
+            <button class="cart-button">加入购物车</button>
+            <button class="cart-button">立即购买</button>
+        </div>
+    </div>
+    <div class="specific-item">
+        <a href="" target="_blank"><img src="../static/images/HW/hw1.png" th:src="@{/images/HW/hw1.png}"/></a>
+        <input type="hidden" class="id"/>
+        <span class="info_">
+                <span class="what_info">型号：</span>
+                <span class="info_content" >华为Nova6 SE</span><br/>
+                <span class="what_info">价格：</span>
+                <span class="info_content">3998.00</span><br/>
+            </span>
+        <div class="button_">
+            <button class="cart-button">加入购物车</button>
+            <button class="cart-button">立即购买</button>
+        </div>
+    </div>
+    <div class="specific-item">
+        <a href="" target="_blank"><img src="../static/images/HW/hw1.png" th:src="@{/images/HW/hw1.png}"/></a>
+        <input type="hidden" class="id"/>
+        <span class="info_">
+                <span class="what_info">型号：</span>
+                <span class="info_content" >华为Nova6 SE</span><br/>
+                <span class="what_info">价格：</span>
+                <span class="info_content">3998.00</span><br/>
+            </span>
+        <div class="button_">
+            <button class="cart-button">加入购物车</button>
+            <button class="cart-button">立即购买</button>
+        </div>
+    </div>
+    <div class="specific-item">
+        <a href="" target="_blank"><img src="../static/images/HW/hw1.png" th:src="@{/images/HW/hw1.png}"/></a>
+        <input type="hidden" class="id"/>
+        <span class="info_">
+                <span class="what_info">型号：</span>
+                <span class="info_content" >华为Nova6 SE</span><br/>
+                <span class="what_info">价格：</span>
+                <span class="info_content">3998.00</span><br/>
+            </span>
+        <div class="button_">
+            <button class="cart-button">加入购物车</button>
+            <button class="cart-button">立即购买</button>
+        </div>
+    </div>
+    <div class="specific-item">
+        <a href="" target="_blank"><img src="../static/images/HW/hw1.png" th:src="@{/images/HW/hw1.png}"/></a>
+        <input type="hidden" class="id"/>
+        <span class="info_">
+                <span class="what_info">型号：</span>
+                <span class="info_content" >华为Nova6 SE</span><br/>
+                <span class="what_info">价格：</span>
+                <span class="info_content">3998.00</span><br/>
+            </span>
+        <div class="button_">
+            <button class="cart-button">加入购物车</button>
+            <button class="cart-button">立即购买</button>
+        </div>
+    </div>
+    <!--*/-->
+</div>
+
+<!--The end-->
+<div class="the-last-box Big-Brother clearfix">
+    <div class="other-service">
+        <h2>購物指南</h2>
+        <a href="" target="_blank">購物流程</a>
+        <a href="" target="_blank">會員介紹</a>
+        <a href="" target="_blank">生活旅行</a>
+        <a href="" target="_blank">常見問題</a>
+        <a href="" target="_blank">大家電</a>
+        <a href="" target="_blank">聯繫客服</a>
+    </div>
+    <div class="other-service">
+        <h2>配送方式</h2>
+        <a href="" target="_blank">上門自提</a>
+        <a href="" target="_blank">211限時達</a>
+        <a href="" target="_blank">配送服務查詢</a>
+        <a href="" target="_blank">配送費收取標準</a>
+        <a href="" target="_blank">海外配送</a>
+    </div>
+    <div class="other-service">
+        <h2>支付方式</h2>
+        <a href="" target="_blank">貨到付款</a>
+        <a href="" target="_blank">在線支付</a>
+        <a href="" target="_blank">分期付款</a>
+        <a href="" target="_blank">郵局匯款</a>
+        <a href="" target="_blank">公司轉賬</a>
+    </div>
+    <div class="other-service">
+        <h2>售後服務</h2>
+        <a href="" target="_blank">售後政策</a>
+        <a href="" target="_blank">價格保護</a>
+        <a href="" target="_blank">退款說明</a>
+        <a href="" target="_blank">返修/退換貨</a>
+        <a href="" target="_blank">取消訂單</a>
+    </div>
+    <div class="other-service">
+        <h2>特色服務</h2>
+        <a href="" target="_blank">奪寶島</a>
+        <a href="" target="_blank">DIY裝機</a>
+        <a href="" target="_blank">延保服務</a>
+        <a href="" target="_blank">京東E卡</a>
+        <a href="" target="_blank">京東通信</a>
+        <a href="" target="_blank">京東JD+</a>
+    </div>
+</div>
+
+<script>
+    /*
+        运动的  是UL:left 还有 btn Left 如果是第一张导最后一张 最后一张到第一张改变opacity
+        找变量 来记录 当前显示项
+
+        自动部分 num++
+
+        按钮点击部分 num更新为当前点击项
+
+        左按钮 num===0 num--
+
+        右按钮 num++ 判断num===5 若是先从4~5 瞬间拉回真正第一张
+
+
+    */
+
+    let oWrap = document.getElementById("wrap"),
+        oPic = document.getElementsByClassName("pic")[0],
+        aBtn = document.querySelectorAll(".tab li + li "),
+        oOn = document.getElementsByClassName("on")[0],
+        oPrev = document.getElementsByClassName("prev")[0],
+        oNext = document.getElementsByClassName("next")[0],
+        num = 0,//记录当前的序号
+        wth = 800,//图片的宽度
+        len = aBtn.length;//5
+
+    //自动部分
+    // bannerRun()
+    function bannerRun(){
+        num++
+        animation(oPic,{
+            data:{
+                left:-num * wth//每次都多动一次图片的宽度
+            },
+            speedOpt:{
+                ease:"Circ",
+                speed:1
+            }
+        },500,()=>{
+            //回调函数
+            if(num === len){//如果动画从4~5之后 瞬间从伪第一张变为真第一张
+                oPic.style.left = 0
+                num = 0
+            }
+        })
+
+        //关于btn
+        if(num === len){//4~5的变化
+            //在最后一个处消失
+            animation(oOn,{
+                data:{
+                    opacity:0
+                },
+                speedOpt:{
+                    ease:"Circ",
+                    speed:1
+                }
+            },250,()=>{
+                oOn.style.left = 10 + "px" //按钮在第一个出现
+                animation(oOn,{
+                    data:{
+                        opacity:1
+                    }
+                },250)
+            })
+        }else{
+            animation(oOn,{
+                data:{
+                    left:num *35 + 8 ,//按钮在第一个出现
+                    opacity:1
+                }
+            },500)
+        }
+
+    }
+
+    //按钮点击部分 num更新为当前点击项
+    for(let i =0;i<len; i++){
+        aBtn[i].onclick = function(){
+            if(Math.abs(i-num)>1){//判断按钮的变化
+                animation(oOn,{
+                    data:{
+                        opacity:0
+                    }
+                },250,()=>{
+                    oOn.style.left = i*35 + 8 +"px"
+                    animation(oOn,{
+                        data:{
+                            opacity:1
+                        }
+                    },250)
+                })
+            }else{//隔一个点击出现
+                animation(oOn,{
+                    data:{
+                        left:i*35+8
+                    }
+                },500)
+            }
+            //点击对应的点出现对应的图片
+            animation(oPic,{//给UL(就是oPic)来改变left的值
+                data:{
+                    left:-i*wth
+                },
+                speedOpt:{
+                    ease:"Circ",
+                    speed:1
+                }
+            },500)
+            num = i//更新为当前的i值
+        }
+    }
+
+    //左按钮 num===0 num--
+    oPrev.onclick = function(){
+        num--
+        if(num< 0){//只有num=0的时候才触发只是第一张跳到最后一张
+            num = len-1
+            oPic.style.left =-len * wth + "px"//动到伪第一张图
+            animation(oOn,{
+                data:{
+                    opacity:0
+                }
+            },250,()=>{
+                oOn.style.left = num*35+8 + "px"//先把它拉到最后一项
+                animation(oOn,{
+                    data:{
+                        opacity:1
+                    }
+                },250)
+            })
+        }
+        //图片变换 按钮也接着变化
+        animation(oPic,{
+            data:{
+                left: -num * wth//更新到倒数第二张 也就是真的最后一张
+            },
+            speedOpt:{
+                ease:"Circ",
+                speed:1
+            }
+        },500)
+
+        if(num !== len - 1){//屏蔽掉num = 4的情况
+            animation(oOn,{
+                data:{
+                    left:num*35+8
+                }
+            },500)
+        }
+    }
+
+    //右按钮
+    oNext.onclick = function(){
+        num++
+        if(num === len){//从4动到5 最后一项的位置 btn从5消失 从1出现
+            animation(oOn,{
+                data:{
+                    opacity:0
+                }
+            },250,()=>{
+                oOn.style.left = "10px"//将btn拉到第一的位置
+                animation(oOn,{
+                    data:{
+                        opacity:1
+                    }
+                },250)
+            })
+        }else{//不是4-5的情况
+            animation(oOn,{
+                data:{
+                    left:num*35 + 8//num就是在上一个基础上++的值
+                }
+            },500)
+        }
+        //下面就是更改UL(oPic)图片的切换
+        animation(oPic,{
+            data:{
+                left:-num*wth//更新就是当前图片的num值
+            },
+            speedOpt:{
+                ease:"Circ",
+                speed:1
+            }
+        },500,()=>{
+            // oPic.style.left = 0//将伪第一张变为真正的第一张
+            // num = 0
+            //在回调函数里判断num是不是等于len
+            if(num === len){//4变到5的情况
+                num = 0
+                oPic.style.left = 0
+            }
+        })
+
+    }
+
+    let time = setInterval(bannerRun,1000)
+
+    oWrap.onmouseenter = function(){
+        clearInterval(time)
+    }
+
+    oWrap.onmouseleave = function (){
+        time = setInterval(bannerRun,1000)
+    }
+
+
+</script>
+
+<script src="../static/lib/animation.js" th:src="@{/lib/animation.js}"></script>
+</body>
+</html>

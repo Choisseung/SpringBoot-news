@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息修改</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/antd.css" th:href="@{/css/antd.css}">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        function savePassword() {
+            // alert("这是一个function");
+            var p1 = document.getElementById('p1').value;
+            var p2 = document.getElementById('p2').value;
+            var p3 = document.getElementById('p3').value;
+            if (p1 == "" || p2 == "" || p3 == "") {
+                alert("请输入密码");
+                return;
+            }
+            if (!(p2 === p3 && p2 != "" && p2 != null)) {
+                alert("两次密码不匹配！");
+                return;
+            }
+            alert("修改密码成功！");
+            // $('#myModal').modal('hide')
+        }
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="selfInfo_window">
+        <div class="ui success message" th:unless="${#strings.isEmpty(message)}" style="float: right;width: 350px;margin-right: 30px">
+            <i class="close icon"></i>
+            <div class="header">提示：</div>
+            <p th:text="${message}">恭喜，操作成功！</p>
+        </div>
+
+        <div style="margin-top: 50px;">
+            <h2 align="center">个人信息</h2>
+        </div>
+        <form action="#" method="post" th:object="${user}" th:action="@{/admin/userUpdate}">
+            <input type="hidden" name="id" th:value="*{id}">
+            <input type="hidden" name="username" th:value="*{username}">
+            <input type="hidden" name="password" th:value="*{password}">
+            <input type="hidden" name="admin" th:value="*{admin}">
+
+            <div class="self_info" style="margin: 0 auto;width: 400px;">
+                <div class="ant-row" style="margin-top: 50px;">
+                    <div class="ant-col ant-col-6" style="display: inline;">
+                        <h3>用户名:</h3>
+                    </div>
+                    <div class="ant-col ant-col-4" style="display: inline;">
+                        <h3><span th:text="*{username}"></span></h3>
+                    </div>
+                </div>
+                <div class="ant-row" style="margin-top: 50px;">
+                    <div class="ant-col ant-col-5">
+                        <h3 style="margin: auto 0px;">昵称：</h3>
+                    </div>
+                    <div class="ant-col ant-col-6"><input type="text" class="ant-input" value="" th:value="*{nickname}"
+                            style="width: 150px;" name="nickname"></div>
+                </div>
+                <div class="ant-row" style="margin-top: 50px;">
+                    <div class="ant-col ant-col-8">
+                        <h3 style="margin: auto 0px;">联系方式：</h3>
+                    </div>
+                    <div class="ant-col ant-col-6"><input type="text" class="ant-input" value="" th:value="*{phone}"
+                            style="width: 150px;" name="phone"></div>
+                </div>
+
+                <div class="ant-row" style="margin-top: 50px;">
+                    <div class="ant-col ant-col-8">
+                        <h3 style="margin: auto 0px;">头像Url：</h3>
+                    </div>
+                    <div class="ant-col ant-col-10"><input type="text" class="ant-input"
+                            value="" th:value="*{imgUrl}" style="width: 250px;" name="imgUrl"></div>
+                </div>
+
+        
+
+
+                <div class="ant-row" style="margin-top: 50px;">
+                    <div style=" display:inline">
+                        <button type="submit" class="ant-btn ant-btn-primary">
+                            <span>保存</span>
+                        </button>
+                    </div>
+                    <div style="margin-left: 80px; display:inline">
+                        <button type="button" class="ant-btn ant-btn-primary" id="changePassword" data-toggle="modal"
+                            data-target="#myModal">
+                            <span>修改密码</span>
+                        </button>
+                    </div>
+                    <div style="margin-left: 80px; display:inline">
+                        <button type="button" class="ant-btn">
+                            <span>返回</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+    </form>
+
+    </div>
+    </div>
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="#" id="pwd-form" th:object="${user}" th:action="@{/admin/userinfo/password}" method="post">
+                    <input type="hidden" name="id" th:value="*{id}">
+                    <input type="hidden" name="username" th:value="*{username}">
+                    <input type="hidden" name="admin" th:value="*{admin}">
+                    <input type="hidden" name="imgUrl" th:value="*{imgUrl}">
+                    <input type="hidden" name="phone" th:value="*{phone}">
+                    <input type="hidden" name="nickname" th:value="*{nickname}">
+
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        修改密码
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="ant-row">
+                        <div class="ant-col ant-col-6">
+                            <h4 style="margin: 5px 0px;">请输入旧密码：</h4>
+                        </div>
+                        <div class="ant-col ant-col-6">
+                            <input type="password" class="ant-input" value="" style="width: 150px;" id="p1" name="oldPassword">
+                        </div>
+                    </div>
+                    <div class="ant-row" style="margin-top: 20px;">
+                        <div class="ant-col ant-col-6">
+                            <h4 style="margin: 5px 0px;">请输入新密码：</h4>
+                        </div>
+                        <div class="ant-col ant-col-6">
+                            <input type="password" class="ant-input" value="" style="width: 150px;" id="p2" name="newPassword">
+                        </div>
+                    </div>
+                    <div class="ant-row" style="margin-top: 20px;">
+                        <div class="ant-col ant-col-8" >
+                            <h4 style=" margin: 5px 0px;">请再次输入新密码：</h4>
+                        </div>
+                        <div class="ant-col ant-col-6">
+                            <input type="password" class="ant-input" value="" style="width: 150px;" id="p3">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" id="pwd-btn">
+                        修改
+                    </button>
+                </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+
+</body>
+<script>
+    $('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
+
+    $('#pwd-btn').click(function () {
+        var p1 = document.getElementById('p1').value;
+        var p2 = document.getElementById('p2').value;
+        var p3 = document.getElementById('p3').value;
+        if (p1 == "" || p2 == "" || p3 == "") {
+            alert("请输入密码");
+            return;
+        }
+        if (!(p2 === p3 && p2 != "" && p2 != null)) {
+            alert("两次密码不匹配！");
+            return;
+        }
+        $('#pwd-form').submit();
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+
+</html>

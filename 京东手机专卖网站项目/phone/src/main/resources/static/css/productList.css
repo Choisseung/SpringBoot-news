@@ -1,0 +1,34 @@
+.fa-refresh:before {
+    content:none;
+}
+.fa-file-o:before {
+    content: none;
+}
+.box-header.with-border {
+    border-bottom: 0px solid #f4f4f4;
+}
+.box {
+    border-top: 0px solid #d2d6de;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #f4f4f4;
+    background-color: white;
+}
+.bg-olive {
+    background-color: #5897fb !important;
+}
+.fa-dashboard:before, .fa-tachometer:before {
+    content: none;
+}
+a {
+    color: #3c8dbc;
+    margin-left: 14px;
+}
+.btn-default{
+    margin-left: 3px;
+    background-color: white;
+    border: 1px blueviolet;
+
+
+}
